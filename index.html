@@ -4,62 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping list example</title>
-    <style>
-      li {
-        margin-bottom: 10px;
-      }
-
-      li button {
-        font-size: 8px;
-        margin-left: 20px;
-        color: #666;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>My shopping list</h1>
-    <form>
-      <div>
-        <label for="item">Enter a new item:</label>
-        <input type="text" name="item" id="item" />
-        <button>Add item</button>
-      </div>
-    </form>
-    <ul></ul>
-
-    <script>
-      let ul = document.querySelector("ul");
-      let inputItem = document.getElementById("item");
-      let button = document.querySelector("button");
-      let form = document.querySelector("form");
-
-      // function deleteButton(event) {
-      //   ul.removeChild(listItem);
-      // }
-
-      function shoppingList(event) {
-        event.preventDefault();
-        if (inputItem.value.length > 0) {
-          let inputValue = inputItem.value;
-          inputItem.value = "";
-
-          let listItem = document.createElement("li");
-          let listText = document.createElement("span");
-          let listButton = document.createElement("button");
-
-          listItem.appendChild(listText);
-          listText.textContent = inputValue;
-          listItem.appendChild(listButton);
-          listButton.textContent = "Delete";
-          ul.appendChild(listItem);
-
-          listButton.addEventListener("click", () => {
-            ul.removeChild(listItem);
-          });
-        }
-      }
-
-      button.addEventListener("click", shoppingList);
-    </script>
+    <div class="full-list">
+      <h1>My shopping list</h1>
+      <form>
+        <div>
+          <label for="item">Enter a new item: </label>
+          <input type="text" name="item" autofocus="on" id="item" />
+          <button>Add item</button>
+        </div>
+      </form>
+      <ul></ul>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
