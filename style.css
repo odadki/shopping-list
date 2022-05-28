@@ -6,11 +6,13 @@ body {
   text-align: center;
   font-family: var(--main-font);
   margin-top: 100px;
-  background-color: #bcfcff;
+  font-size: 18px;
+  /* background-color: #bcfcff; */
 }
 
 h1 {
   font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
 ul {
@@ -19,12 +21,35 @@ ul {
   margin-top: 30px;
   text-transform: none;
   text-align: left;
+  list-style: none;
+}
+
+.input-search {
+  border: 1px solid #898989;
+  color: #898989;
+  font-size: 15px;
+}
+
+button {
+  color: black !important;
+  border: 1px solid #898989;
+  margin-left: 10px;
+  padding: 2px 9px;
+  font-size: 20px;
+  background-color: #ffadad;
+  border-radius: 5px;
 }
 
 button,
 #item {
   font-family: var(--main-font);
-  padding: 2px 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.add-item-btn {
+  font-size: 15px;
+  background-color: #b0fcb0;
+  padding: 3px 14px;
 }
 
 li {
@@ -35,4 +60,21 @@ li button {
   font-size: 8px;
   margin-left: 20px;
   color: #666;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+  body {
+    font-size: 13px;
+  }
+  .input-search {
+    font-size: 13px;
+  }
+  .add-item-btn {
+    font-size: 13px;
+    padding: 3px 13px;
+  }
 }
