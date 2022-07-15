@@ -74,12 +74,13 @@ li button {
   color: #666;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 376px) and (max-width: 576px) {
   h1 {
     font-size: 1.6rem;
     margin-bottom: 30px;
   }
   body {
+    margin-top: 50px;
     font-size: 13px;
   }
   .input-search {
@@ -88,5 +89,16 @@ li button {
   .add-item-btn {
     font-size: 13px;
     padding: 3px 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  body {
+    margin-top: 20px;
+    font-size: 13px;
   }
 }
