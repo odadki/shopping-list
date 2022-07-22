@@ -37,10 +37,6 @@ ul {
   list-style: none;
 }
 
-/* .list-decoration {
-  list-style: square;
-} */
-
 .checkbox-decoration {
   margin-right: 10px;
 }
@@ -83,9 +79,10 @@ li {
 }
 
 li button {
-  font-size: 8px;
+  font-size: 11px;
   margin-left: 20px;
   color: #666;
+  padding: 2px 6px;
 }
 
 @media (min-width: 376px) and (max-width: 576px) {
@@ -104,6 +101,10 @@ li button {
     font-size: 13px;
     padding: 3px 13px;
   }
+  li button {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -114,5 +115,9 @@ li button {
   body {
     margin-top: 20px;
     font-size: 13px;
+  }
+  li button {
+    font-size: 9px;
+    padding: 1px 5px;
   }
 }

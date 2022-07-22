@@ -22,6 +22,7 @@ function shoppingList(event) {
     listText.textContent = inputValue;
     listItem.appendChild(listButton);
     listButton.textContent = "DEL";
+    listButton.classList.add("delete-button");
     ul.appendChild(listItem);
 
     listButton.addEventListener("click", () => {
