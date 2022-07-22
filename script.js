@@ -3,10 +3,6 @@ let inputItem = document.getElementById("item");
 let button = document.querySelector("button");
 let form = document.querySelector("form");
 
-// function deleteButton(event) {
-//   ul.removeChild(listItem);
-// }
-
 function shoppingList(event) {
   event.preventDefault();
   if (inputItem.value.length > 0) {
@@ -16,15 +12,24 @@ function shoppingList(event) {
     let listItem = document.createElement("li");
     let listText = document.createElement("span");
     let listButton = document.createElement("button");
+    let checkbox = document.createElement("input");
 
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.classList.add("checkbox-decoration");
+    listItem.classList.add("list-decoration");
+    listItem.appendChild(checkbox);
     listItem.appendChild(listText);
     listText.textContent = inputValue;
     listItem.appendChild(listButton);
-    listButton.textContent = "Delete";
+    listButton.textContent = "DEL";
     ul.appendChild(listItem);
 
     listButton.addEventListener("click", () => {
       ul.removeChild(listItem);
+    });
+
+    checkbox.addEventListener("click", () => {
+      listItem.classList.toggle("checkbox-click");
     });
   }
 }
